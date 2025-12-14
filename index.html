@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aarohi AI — Building Intelligent Systems</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#2563eb',
+              dark: '#1e40af',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+  /* HERO BACKGROUND SLIDER */
+  .hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: heroFade 24s infinite;
+  animation-fill-mode: both;
+}
+
+  .hero-bg-1 {
+    background-image: url('assets/background-image1.png');
+    animation-delay: 0s;
+    opacity: 1;
+  }
+
+  .hero-bg-2 {
+    background-image: url('assets/hero-2.jpg');
+    animation-delay: 8s;
+  }
+
+  .hero-bg-3 {
+    background-image: url('assets/hero-3.jpg');
+    animation-delay: 16s;
+  }
+
+  @keyframes heroFade {
+    0%   { opacity: 0; }
+    8%   { opacity: 1; }
+    33%  { opacity: 1; }
+    41%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+</style>
+
+</head>
+
+<body class="bg-white text-slate-700 antialiased">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <!-- LOGO -->
+      <img src="assets/aarohi_logo.png" class="h-9" alt="Aarohi AI"/>
+      <span class="font-semibold text-slate-900">Aarohi AI</span>
+    </div>
+
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#vision" class="hover:text-brand">Vision</a>
+      <a href="#work" class="hover:text-brand">What We Build</a>
+      <a href="#demo" class="hover:text-brand">Demo</a>
+      <a href="#contact" class="px-5 py-2 rounded-full bg-brand text-white hover:bg-brand-dark">
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<!-- HERO with Background Image Slider -->
+<section class="relative pt-24 pb-24 overflow-hidden">
+
+  <!-- Background slider -->
+  <div class="absolute inset-0 -z-0">
+    <div class="hero-bg hero-bg-1"></div>
+    <div class="hero-bg hero-bg-2"></div>
+    <div class="hero-bg hero-bg-3"></div>
+    <div class="absolute inset-0 bg-white/70"></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+
+    <!-- Beta badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-sm font-semibold mb-6 border border-brand-100">
+      <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+      Early Beta • Telegram Community
+    </div>
+
+    <!-- Headline (STATIC, ALWAYS VISIBLE) -->
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight">
+      Mental Health Care,
+      
+    </h1>
+     <!-- Animated Text -->
+    <div class="relative h-20 md:h-24 overflow-hidden">
+      <div id="hero-slider" class="absolute inset-0 transition-transform duration-700 ease-in-out">
+
+        <div class="hero-slide text-2xl md:text-4xl lg:text-5xl font-bold gradient-text">
+          Reimagined.
+        </div>
+
+        <div class="hero-slide text-2xl md:text-4xl lg:text-5xl font-bold gradient-text">
+          Private & Secure.
+        </div>
+
+        <div class="hero-slide text-2xl md:text-4xl lg:text-5xl font-bold gradient-text">
+          Powered by AI.
+        </div>
+
+        <div class="hero-slide text-2xl md:text-4xl lg:text-5xl font-bold gradient-text">
+          Built for Humans.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Subtext -->
+    <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+      Aarohi is building a safe, privacy-first mental health platform —
+      combining human connection, moderated communities, and AI-assisted care.
+    </p>
+
+    <!-- CTA -->
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#demo"
+         class="px-7 py-3 bg-white text-slate-700 border border-slate-200 rounded-full font-semibold hover:bg-slate-50 transition shadow-sm">
+        ▶ Watch Demo
+      </a>
+
+      <a href="#contact"
+         class="px-7 py-3 bg-brand-600 text-blue rounded-full font-semibold hover:bg-brand-700 transition shadow-lg shadow-brand-500/30">
+        Join Telegram Beta
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- DEMO -->
+<section id="demo" class="py-20 bg-slate-50">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-slate-900 mb-10">
+      Product Walkthrough
+    </h2>
+
+    <div class="aspect-video rounded-2xl overflow-hidden shadow-xl border bg-black">
+
+  <video
+    controls
+    preload="metadata"
+    class="w-full h-full object-contain bg-black rounded-2xl"
+    poster="assets/background_image1.png">
+
+    <source src="videos/sample_video.mp4" type="video/mp4">
+
+    Your browser does not support the video tag.
+  </video>
+
+</div>
+
+  </div>
+</section>
+
+<!-- WHAT WE BUILD -->
+<section id="work" class="py-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div>
+      <h3 class="text-xl font-bold text-slate-900">Privacy First</h3>
+      <p class="mt-3 text-slate-500">
+        Your mental health data is sensitive. We employ end-to-end encryption and zero-knowledge architecture.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold text-slate-900">Community Led</h3>
+      <p class="mt-3 text-slate-500">
+        Connect with peers in moderated, safe spaces designed to foster healing and mutual support.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold text-slate-900">AI Assisted</h3>
+      <p class="mt-3 text-slate-500">
+        Smart journaling and mood tracking powered by AI to provide personalized insights for your therapist.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<!-- <section id="contact" class="py-20 bg-slate-900 text-white text-center">
+  <h2 class="text-3xl font-bold">Let’s Build Something Real</h2>
+  <p class="mt-4 text-slate-300">
+    Early-stage collaborations, pilots, and research partnerships.
+  </p>
+
+  <a href="mailto:hello@aarohiai.in"
+     class="inline-block mt-8 px-10 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-100">
+    hello@aarohiai.in
+  </a>
+</section> -->
+
+<section id="contact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-md mb-6">
+                <i class="fa-brands fa-telegram text-3xl"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Exclusive Telegram Community</h2>
+            
+            <p class="text-brand-100 text-lg mb-8 leading-relaxed">
+                We are currently in a closed beta phase. Our Telegram channel provides early access updates, behind-the-scenes content, and direct communication with the founders.
+            </p>
+
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 mb-8 max-w-2xl mx-auto">
+                <div class="flex items-start gap-4 text-left">
+                    <div class="flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-lock text-yellow-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Access is currently restricted</h4>
+                        <p class="text-brand-100 text-sm">
+                            To maintain the quality and safety of our community, new members must be verified before joining the Telegram channel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <div class="text-center">
+                    <p class="text-sm text-brand-200 mb-2 uppercase tracking-wide font-semibold">Step 1: Contact for Approval</p>
+                    <a href="mailto:p24shubhamj@iim.ac.in" class="flex items-center gap-3 bg-brand-700 text-brand-900 px-6 py-3 rounded-lg font-bold hover:bg-brand-50 transition w-full md:w-auto justify-center">
+                        <i class="fa-solid fa-envelope"></i> Email Us
+                    </a>
+                </div>
+                
+                <div class="hidden md:block h-px w-16 bg-white/20"></div>
+
+                <div class="text-center">
+                    <p class="text-sm text-brand-200 mb-2 uppercase tracking-wide font-semibold">Step 2: Join Channel</p>
+                    <a href="#" onclick="alert('Please contact us via email or phone first to get your access code.')" class="flex items-center gap-3 bg-brand-700 text-white border border-brand-500 px-6 py-3 rounded-lg font-bold hover:bg-brand-600 transition w-full md:w-auto justify-center opacity-75">
+                        <i class="fa-brands fa-telegram"></i> Telegram Link
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/10">
+                <p class="text-brand-200 mb-4">Or reach out directly via phone for immediate inquiries:</p>
+                <a href="tel:+15550123456" class="text-2xl font-bold text-white hover:text-brand-200 transition">
+                    +91 75992 31977
+                </a>
+            </div>
+        </div>
+    </section>
+
+<footer class="py-8 text-center text-sm text-slate-400">
+  powered by SMJ Wellness Solutions
+  <!-- © 2025 Aarohi AI. All rights reserved. -->
+</footer>
+
+<script>
+  const slider = document.getElementById('hero-slider');
+  const slides = document.querySelectorAll('.hero-slide');
+  let index = 0;
+
+  slides.forEach((slide, i) => {
+    slide.style.height = '100%';
+  });
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    slider.style.transform = `translateY(-${index * 100}%)`;
+  }, 3500);
+</script>
+
+</body>
+</html>
