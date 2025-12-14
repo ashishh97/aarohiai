@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aarohi AI — Building Intelligent Systems</title>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="assets/aarohi_logo.png">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -23,164 +23,148 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
           },
+          // Define a vibrant blue for brand color
           colors: {
             brand: {
-              DEFAULT: '#2563eb',
-              dark: '#1e40af',
+                50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              DEFAULT: '#3b82f6', // Equivalent to blue-500
+              600: '#2563eb', // Used as primary CTA
+              700: '#1d4ed8', // Darker shade for hover/background
+              800: '#1e40af', // Used as brand-dark in original code
             }
           }
         }
       }
-    }
   </script>
   <style>
-  /* HERO BACKGROUND SLIDER */
-  .hero-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: heroFade 24s infinite;
-  animation-fill-mode: both;
-}
+    /* GRADIENT TEXT */
+    .gradient-text {
+      background-image: linear-gradient(to right, #60a5fa, #c4b5fd); /* Light Blue to Light Purple */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    /* HERO BACKGROUND - Dark Theme */
+    .hero-dark-bg {
+      background-color: #0f172a; /* slate-900 */
+      /* Subtle texture/pattern for depth */
+      background-image: radial-gradient(circle at 50% 10%, rgba(37, 99, 235, 0.1) 0%, transparent 40%);
+    }
+  
+    /* Telegram Brand Color */
+    .telegram-blue {
+      background-color: #0088cc; /* Official Telegram Blue */
+    }
+    .hover\\:bg-telegram-dark:hover {
+      background-color: #007bb6;
+    }
 
-  .hero-bg-1 {
-    background-image: url('assets/background-image1.png');
-    animation-delay: 0s;
-    opacity: 1;
-  }
+    /* Base class for hiding images smoothly */
+    .fade-image {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .fade-image.active {
+      opacity: 1;
+    }
 
-  .hero-bg-2 {
-    background-image: url('assets/hero-2.jpg');
-    animation-delay: 8s;
-  }
-
-  .hero-bg-3 {
-    background-image: url('assets/hero-3.jpg');
-    animation-delay: 16s;
-  }
-
-  @keyframes heroFade {
-    0%   { opacity: 0; }
-    8%   { opacity: 1; }
-    33%  { opacity: 1; }
-    41%  { opacity: 0; }
-    100% { opacity: 0; }
-  }
-</style>
+  </style>
 
 </head>
 
 <body class="bg-white text-slate-700 antialiased">
 
-<!-- NAVBAR -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b">
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b">
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <!-- LOGO -->
-      <img src="assets/aarohi_logo.png" class="h-9" alt="Aarohi AI"/>
-      <span class="font-semibold text-slate-900">Aarohi AI</span>
+            <img src="assets/aarohi_logo.png" class="h-12" alt="Aarohi AI"/>
+      <span class="font-bold text-lg text-slate-900">Aarohi AI</span>
+      
     </div>
 
     <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="#vision" class="hover:text-brand">Vision</a>
-      <a href="#work" class="hover:text-brand">What We Build</a>
-      <a href="#demo" class="hover:text-brand">Demo</a>
-      <a href="#contact" class="px-5 py-2 rounded-full bg-brand text-white hover:bg-brand-dark">
+      <a href="#how-we-do" class="text-slate-600 hover:text-brand-600 transition">How We Do</a>
+      <a href="#work" class="text-slate-600 hover:text-brand-600 transition">Pillars</a>
+      <a href="#demo" class="text-slate-600 hover:text-brand-600 transition">Demo</a>
+      <a href="#contact" class="px-5 py-2 rounded-full bg-brand-600 text-black hover:bg-brand-700 transition shadow-md">
         Contact
       </a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<!-- HERO with Background Image Slider -->
-<section class="relative pt-24 pb-24 overflow-hidden">
-
-  <!-- Background slider -->
-  <div class="absolute inset-0 -z-0">
-    <div class="hero-bg hero-bg-1"></div>
-    <div class="hero-bg hero-bg-2"></div>
-    <div class="hero-bg hero-bg-3"></div>
-    <div class="absolute inset-0 bg-white/70"></div>
-  </div>
+<section class="relative pt-32 pb-32 overflow-hidden hero-dark-bg">
 
   <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
 
-    <!-- Beta badge -->
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-sm font-semibold mb-6 border border-brand-100">
-      <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-      Early Beta • Telegram Community
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-700/50 text-brand-100 text-sm font-semibold mb-6 border border-brand-500/50">
+      <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+      Early Beta • Join Our Telegram Community
     </div>
 
-    <!-- Headline (STATIC, ALWAYS VISIBLE) -->
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight">
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white tracking-tight">
       Mental Health Care,
       
     </h1>
-     <!-- Animated Text -->
-    <div class="relative h-20 md:h-24 overflow-hidden">
+         <div class="relative h-24 md:h-32 overflow-hidden">
       <div id="hero-slider" class="absolute inset-0 transition-transform duration-700 ease-in-out">
 
-        <div class="hero-slide text-2xl md:text-4xl lg:text-5xl font-bold gradient-text">
+        <div class="hero-slide text-4xl md:text-6xl lg:text-7xl font-extrabold gradient-text">
           Reimagined.
         </div>
 
-        <div class="hero-slide text-2xl md:text-4xl lg:text-5xl font-bold gradient-text">
+        <div class="hero-slide text-4xl md:text-6xl lg:text-7xl font-extrabold gradient-text">
           Private & Secure.
         </div>
 
-        <div class="hero-slide text-2xl md:text-4xl lg:text-5xl font-bold gradient-text">
+        <div class="hero-slide text-4xl md:text-6xl lg:text-7xl font-extrabold gradient-text">
           Powered by AI.
         </div>
 
-        <div class="hero-slide text-2xl md:text-4xl lg:text-5xl font-bold gradient-text">
+        <div class="hero-slide text-4xl md:text-6xl lg:text-7xl font-extrabold gradient-text">
           Built for Humans.
         </div>
 
       </div>
     </div>
 
-    <!-- Subtext -->
-    <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-      Aarohi is building a safe, privacy-first mental health platform —
+        <p class="mt-6 text-xl text-brand-200 max-w-2xl mx-auto leading-relaxed">
+      Aarohi is building a **safe, privacy-first** mental health platform —
       combining human connection, moderated communities, and AI-assisted care.
     </p>
 
-    <!-- CTA -->
-    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-      <a href="#demo"
-         class="px-7 py-3 bg-white text-slate-700 border border-slate-200 rounded-full font-semibold hover:bg-slate-50 transition shadow-sm">
-        ▶ Watch Demo
-      </a>
-
+        <div class="mt-12 flex flex-col sm:flex-row justify-center gap-4">
       <a href="#contact"
-         class="px-7 py-3 bg-brand-600 text-blue rounded-full font-semibold hover:bg-brand-700 transition shadow-lg shadow-brand-500/30">
-        Join Telegram Beta
+         class="px-8 py-4 bg-brand-600 text-white rounded-full font-bold text-lg hover:bg-brand-700 transition shadow-xl shadow-brand-500/50 transform hover:scale-[1.02]">
+        <i class="fa-brands fa-telegram mr-2"></i> Join Telegram Beta
+      </a>
+      <a href="#demo"
+         class="px-8 py-4 bg-white/90 text-brand-200 border border-brand-500/20 rounded-full font-semibold text-lg hover:bg-white/20 transition shadow-md">
+        <i class="fa-solid fa-circle-play mr-2"></i> Watch Demo
       </a>
     </div>
 
   </div>
 </section>
 
-
-
-
-<!-- DEMO -->
 <section id="demo" class="py-20 bg-slate-50">
   <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center text-slate-900 mb-10">
+    <h2 class="text-3xl font-bold text-center text-slate-900 mb-4">
       Product Walkthrough
     </h2>
+    <p class="text-center text-lg text-slate-600 mb-10">See how our platform brings together AI, community, and clinical insights.</p>
 
-    <div class="aspect-video rounded-2xl overflow-hidden shadow-xl border bg-black">
+    <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-100 bg-black">
 
   <video
     controls
     preload="metadata"
-    class="w-full h-full object-contain bg-black rounded-2xl"
-    poster="assets/background_image1.png">
+    class="w-full h-full object-contain bg-black rounded-xl"
+    poster="assets/background-image1.png">
 
     <source src="videos/sample_video.mp4" type="video/mp4">
 
@@ -192,69 +176,94 @@
   </div>
 </section>
 
-<!-- WHAT WE BUILD -->
-<section id="work" class="py-20">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-    <div>
-      <h3 class="text-xl font-bold text-slate-900">Privacy First</h3>
-      <p class="mt-3 text-slate-500">
-        Your mental health data is sensitive. We employ end-to-end encryption and zero-knowledge architecture.
-      </p>
-    </div>
 
-    <div>
-      <h3 class="text-xl font-bold text-slate-900">Community Led</h3>
-      <p class="mt-3 text-slate-500">
-        Connect with peers in moderated, safe spaces designed to foster healing and mutual support.
-      </p>
-    </div>
+<section id="how-we-do" class="py-20 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <!-- <span class="text-sm font-semibold uppercase text-brand-600">Our Workflow</span> -->
+    <h2 class="text-4xl font-extrabold text-slate-900 mt-2 mb-10">
+      Aarohi AI: Your Very Own Friend in the Digital Space
+    </h2>
+  </div>
 
-    <div>
-      <h3 class="text-xl font-bold text-slate-900">AI Assisted</h3>
-      <p class="mt-3 text-slate-500">
-        Smart journaling and mood tracking powered by AI to provide personalized insights for your therapist.
-      </p>
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="relative w-full h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+      
+            <img src="assets/background_image1.png" class="absolute inset-0 w-full h-full object-cover fade-image" alt="AI journaling tool interface">
+      <img src="assets/background_image2.png" class="absolute inset-0 w-full h-full object-cover fade-image" alt="Moderated community platform interface">
+
+            <div class="absolute inset-0 bg-slate-900/40 flex items-end p-8">
+        <p class="text-2xl font-bold text-white leading-tight" id="slider-caption">
+          {/* Caption will be injected by JavaScript below */}
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<!-- <section id="contact" class="py-20 bg-slate-900 text-white text-center">
-  <h2 class="text-3xl font-bold">Let’s Build Something Real</h2>
-  <p class="mt-4 text-slate-300">
-    Early-stage collaborations, pilots, and research partnerships.
-  </p>
+<section id="work" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">
+      Pillars of Aarohi
+    </h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      
+            <div class="p-6 bg-white rounded-xl border border-slate-100 shadow-lg text-center transform hover:scale-[1.03] transition duration-300">
+        <div class="inline-block p-4 rounded-full bg-brand-100 text-brand-600 mb-4">
+          <i class="fa-solid fa-lock text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Privacy First</h3>
+        <p class="mt-3 text-slate-600">
+          Your mental health data is sensitive. We employ **end-to-end encryption** and **zero-knowledge architecture** to ensure absolute confidentiality.
+        </p>
+      </div>
 
-  <a href="mailto:hello@aarohiai.in"
-     class="inline-block mt-8 px-10 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-100">
-    hello@aarohiai.in
-  </a>
-</section> -->
+            <div class="p-6 bg-white rounded-xl border border-slate-100 shadow-lg text-center transform hover:scale-[1.03] transition duration-300">
+        <div class="inline-block p-4 rounded-full bg-brand-100 text-brand-600 mb-4">
+          <i class="fa-solid fa-people-group text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Community Led</h3>
+        <p class="mt-3 text-slate-600">
+          Connect with peers in moderated, safe spaces designed to foster healing, mutual support, and a sense of belonging.
+        </p>
+        </div>
+
+            <div class="p-6 bg-white rounded-xl border border-slate-100 shadow-lg text-center transform hover:scale-[1.03] transition duration-300">
+        <div class="inline-block p-4 rounded-full bg-brand-100 text-brand-600 mb-4">
+          <i class="fa-solid fa-brain text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">AI Assisted</h3>
+        <p class="mt-3 text-slate-600">
+          Smart journaling and mood tracking powered by AI to provide **personalized insights** for your therapist or self-care journey.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section id="contact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
 
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+                <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
 
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <div class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-md mb-6">
-                <i class="fa-brands fa-telegram text-3xl"></i>
+                        <div class="inline-block p-3 rounded-full telegram-blue/70 backdrop-blur-md mb-6 border border-telegram-blue">
+                <i class="fa-brands fa-telegram text-4xl text-white"></i>
             </div>
             
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Exclusive Telegram Community</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Join Our Exclusive Telegram Community</h2>
             
-            <p class="text-brand-100 text-lg mb-8 leading-relaxed">
+            <p class="text-brand-200 text-lg mb-8 leading-relaxed">
                 We are currently in a closed beta phase. Our Telegram channel provides early access updates, behind-the-scenes content, and direct communication with the founders.
             </p>
 
-            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 mb-8 max-w-2xl mx-auto">
+            <div class="bg-slate-800/70 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 md:p-8 mb-8 max-w-2xl mx-auto shadow-2xl">
                 <div class="flex items-start gap-4 text-left">
                     <div class="flex-shrink-0 mt-1">
-                        <i class="fa-solid fa-lock text-yellow-400 text-xl"></i>
+                        <i class="fa-solid fa-user-lock text-brand-400 text-xl"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-2">Access is currently restricted</h4>
-                        <p class="text-brand-100 text-sm">
+                        <h4 class="font-bold text-xl mb-2 text-white">Access is currently restricted</h4>
+                        <p class="text-brand-200 text-base">
                             To maintain the quality and safety of our community, new members must be verified before joining the Telegram channel.
                         </p>
                     </div>
@@ -264,48 +273,89 @@
             <div class="flex flex-col md:flex-row items-center justify-center gap-6">
                 <div class="text-center">
                     <p class="text-sm text-brand-200 mb-2 uppercase tracking-wide font-semibold">Step 1: Contact for Approval</p>
-                    <a href="mailto:p24shubhamj@iim.ac.in" class="flex items-center gap-3 bg-brand-700 text-brand-900 px-6 py-3 rounded-lg font-bold hover:bg-brand-50 transition w-full md:w-auto justify-center">
+                    <a href="mailto:p24shubhamj@iim.ac.in" class="flex items-center gap-3 bg-brand-600 text-white px-8 py-3 rounded-full font-bold hover:bg-brand-700 transition w-full md:w-auto justify-center shadow-lg">
                         <i class="fa-solid fa-envelope"></i> Email Us
                     </a>
                 </div>
                 
-                <div class="hidden md:block h-px w-16 bg-white/20"></div>
+                <div class="hidden md:block h-10 w-px bg-white/20"></div>
+                <div class="block md:hidden h-px w-20 bg-white/20"></div>
+
 
                 <div class="text-center">
                     <p class="text-sm text-brand-200 mb-2 uppercase tracking-wide font-semibold">Step 2: Join Channel</p>
-                    <a href="#" onclick="alert('Please contact us via email or phone first to get your access code.')" class="flex items-center gap-3 bg-brand-700 text-white border border-brand-500 px-6 py-3 rounded-lg font-bold hover:bg-brand-600 transition w-full md:w-auto justify-center opacity-75">
-                        <i class="fa-brands fa-telegram"></i> Telegram Link
+                                        <a href="#" onclick="alert('Please contact us via email first to get your approval code.')" class="flex items-center gap-3 telegram-blue text-white border border-slate-600 px-8 py-3 rounded-full font-bold hover:bg-telegram-dark transition w-full md:w-auto justify-center opacity-90">
+                        <i class="fa-brands fa-telegram"></i> Telegram Link (Requires Code)
                     </a>
                 </div>
             </div>
 
             <div class="mt-12 pt-8 border-t border-white/10">
                 <p class="text-brand-200 mb-4">Or reach out directly via phone for immediate inquiries:</p>
-                <a href="tel:+15550123456" class="text-2xl font-bold text-white hover:text-brand-200 transition">
+                <a href="tel:+917599231977" class="text-3xl font-extrabold text-brand-300 hover:text-brand-100 transition">
                     +91 75992 31977
                 </a>
             </div>
         </div>
     </section>
 
-<footer class="py-8 text-center text-sm text-slate-400">
-  powered by SMJ Wellness Solutions
-  <!-- © 2025 Aarohi AI. All rights reserved. -->
+<footer class="py-8 text-center text-sm text-slate-500 bg-white border-t">
+  <p>&copy; 2025 Aarohi AI. All rights reserved.</p>
+  <p class="mt-1">Powered by SMJ Wellness Solutions</p>
 </footer>
 
 <script>
-  const slider = document.getElementById('hero-slider');
-  const slides = document.querySelectorAll('.hero-slide');
-  let index = 0;
+  // 1. Hero Text Slider
+  const heroSlider = document.getElementById('hero-slider');
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  let heroIndex = 0;
 
-  slides.forEach((slide, i) => {
+  heroSlides.forEach((slide, i) => {
     slide.style.height = '100%';
+    if (i !== 0) slide.style.opacity = '0';
   });
+  heroSlides[0].style.opacity = '1';
 
   setInterval(() => {
-    index = (index + 1) % slides.length;
-    slider.style.transform = `translateY(-${index * 100}%)`;
+    heroSlides[heroIndex].style.opacity = '0';
+    
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    
+    heroSlider.style.transform = `translateY(-${heroIndex * 100}%)`;
+    
+    heroSlides[heroIndex].style.opacity = '1';
+
   }, 3500);
+
+  // 2. "How We Do" Image and Caption Slider Logic
+  const imageElements = document.querySelectorAll('#how-we-do img.fade-image');
+  const captions = [
+    "1/2: Connect and heal with confidence",
+    "2/2: Find clarity instantly: Engage in private, secure dialogue with our AI companion",
+  ];
+  const captionElement = document.getElementById('slider-caption');
+  let imageIndex = 0; // Tracks the currently active image/caption index
+
+  function imageSlider() {
+    // 1. Hide all images and remove 'active' class
+    imageElements.forEach(img => {
+      img.classList.remove('active');
+    });
+    
+    // 2. Set the current image and caption
+    imageElements[imageIndex].classList.add('active'); // Show current image
+    captionElement.textContent = captions[imageIndex]; // Set current caption
+
+    // 3. Advance the index for the next cycle
+    imageIndex = (imageIndex + 1) % imageElements.length;
+  }
+
+  // Initialize the slider immediately
+  imageSlider();
+
+  // Run the slider every 5000ms (5 seconds)
+  setInterval(imageSlider, 5000); 
+
 </script>
 
 </body>
