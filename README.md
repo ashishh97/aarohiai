@@ -1,0 +1,2 @@
+# aarohiai
+AarohiAI static page
